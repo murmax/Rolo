@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:elevation="3dp"
+        android:layout_weight="12"
+        android:layout_margin="5dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="#FF7086B3">
+
+            <TextView
+                android:text="сегодня"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:elevation="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="42sp"
+                android:id="@+id/NumbDateTvCal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/DateTvCal" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:id="@+id/ShortLayoutCal"
+            android:onClick="Today">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/LinLayCalend"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+        android:layout_weight="17"
+        android:background="@color/colorWhite">
+
+            <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp">
+
+                <Button
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ButtonCalendarMonthBack"
+                    android:background="#00FFFFFF" />
+
+                <ImageButton
+                    android:background="@drawable/month_back_icon_selector"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/ButtonBackMonth"
+                    android:layout_width="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/TxtMonthName"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:layout_marginTop="9dp" />
+
+                <ImageButton
+                    android:id="@+id/ButtonNextMonth"
+                    android:background="@drawable/month_forward_icon_selector"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_height="25dp"
+                    android:layout_width="12dp" />
+
+                <Button
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ButtonCalendarMonthNext"
+                    android:layout_gravity="end"
+                    android:background="#00FFFFFF" />
+            </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/flipercalendar">
+
+                <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="ПН"
+                                android:layout_column="1"
+                                android:textAlignment="center"
+                                android:textColorLink="#FF9AA9CA"
+                                android:textColor="#FF9AA9CA"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="ВТ"
+                                android:layout_column="2"
+                                android:textAlignment="center"
+                                android:textColorLink="#FF9AA9CA"
+                                android:textColor="#FF9AA9CA"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="СР"
+                                android:layout_column="3"
+                                android:textAlignment="center"
+                                android:textColorLink="#FF9AA9CA"
+                                android:textColor="#FF9AA9CA"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="ЧТ"
+                                android:layout_column="4"
+                                android:textAlignment="center"
+                                android:textColorLink="#FF9AA9CA"
+                                android:textColor="#FF9AA9CA"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="ПТ"
+                                android:layout_column="5"
+                                android:elevation="5dp"
+                                android:textAlignment="center"
+                                android:textColorLink="#FF9AA9CA"
+                                android:textColor="#FF9AA9CA"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="СБ"
+                                android:layout_column="6"
+                                android:textAlignment="center"
+                                android:textColorLink="#FF9AA9CA"
+                                android:textColor="#FF9AA9CA"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="ВС"
+                                android:layout_column="7"
+                                android:textAlignment="center"
+                                android:textColorLink="#FF9AA9CA"
+                                android:textColor="#FF9AA9CA"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="1"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="2"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="3"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="4"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="5"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="6"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="7"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="1"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="2"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="3"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="4"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="5"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="6"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="7"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="1"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="2"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="3"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="4"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="5"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="6"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="7"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="1"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="2"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="3"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="4"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="5"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="6"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="7"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="1"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="2"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="3"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="4"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="5"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="6"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="7"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="1"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="2"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="3"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="4"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="5"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="6"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                            <TextView
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Ч"
+                                android:layout_column="7"
+                                android:textIsSelectable="false"
+                                android:textAlignment="center"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:textSize="18sp"
+                                android:paddingTop="3dp" />
+                        </TableRow>
+
+                    </TableLayout>
+            </ViewFlipper>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

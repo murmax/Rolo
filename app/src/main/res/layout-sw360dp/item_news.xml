@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:id="@+id/FrameLayout"
+    android:background="@color/colorWhite"
+    android:elevation="10dp"
+    android:layout_margin="15dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="center_horizontal|top"
+        android:alpha="0"
+        android:id="@+id/NewsElemButton" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LinVerNews">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/imageViewItemNews"
+            android:src="@android:drawable/btn_star_big_on"
+            android:scaleType="centerCrop"
+            android:foregroundGravity="top|left"
+            android:layout_margin="0dp"
+            android:layout_gravity="center_horizontal|top" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/textNews"
+                android:textSize="18sp"
+                android:layout_gravity="left|bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/TxtDate"
+        android:layout_gravity="right|bottom"
+        android:textColor="#4c4c4c"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp" />
+
+</FrameLayout>

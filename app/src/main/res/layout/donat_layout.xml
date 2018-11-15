@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF1F1FF">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="7dp"
+        android:background="@android:color/background_light">
+
+
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="110dp"
+            android:id="@+id/ImageChram"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextChram"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:paddingStart="7dp"
+            android:paddingEnd="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/ReligiousDonatPhrase"
+            android:id="@+id/tvTextDon"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibBigDonat"
+                android:text="@string/bigDonat"
+                android:textSize="17sp"
+                android:elevation="5dp"
+                android:onClick="Donat"
+                android:background="@drawable/donat_buttons_selector"
+                android:textColor="@android:color/background_light"
+                android:layout_margin="5dp"
+                style="@style/Base.Widget.AppCompat.ButtonBar"/>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibMediumDonat"
+                android:text="@string/mediumDonat"
+                android:textSize="17sp"
+                android:elevation="5dp"
+                android:onClick="Donat"
+                android:background="@drawable/donat_buttons_selector"
+                android:textColor="@android:color/background_light"
+                android:layout_margin="5dp"
+            style="@style/Base.Widget.AppCompat.ButtonBar"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibSmallDonat"
+            android:background="@drawable/donat_buttons_selector"
+            android:onClick="Donat"
+            android:text="@string/smallDonat"
+            android:textSize="17sp"
+            android:elevation="5dp"
+            android:textColor="@android:color/background_light"
+            style="@style/Base.Widget.AppCompat.ButtonBar"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+</FrameLayout>

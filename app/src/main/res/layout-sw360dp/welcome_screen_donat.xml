@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    android:background="#5f709a">
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true">
+            <ImageView
+                android:id="@+id/WelcomeDonat1"
+                android:layout_height="408dp"
+                android:layout_width="261dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="-35dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="top|center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Дорогие друзья"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Ежедневно церковь помогает миллионам людей решить свои проблемы. Кого-то надо выслушать, кого-то направить на истинный путь, кого-то утешить и поддержать. Более того, благотворительные фонды церкви поддерживают больных людей, строят новые храмы и восстанавливают памятники архитектуры." />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:id="@+id/WelcomeDonat2"
+                android:layout_height="408dp"
+                android:layout_width="261dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="-35dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="top|center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Каждый месяц наш благотворительный фонд будет выбирать новый проект, которому требуется материальная помощь."
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Фонды помощи тяжело больным людям\n Восстановление памятников архитектуры\n Строительство новых храмов и церквей"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Все собранные средства будут направляться на благо тех, кто не может помочь себе самостоятельно."
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </ViewFlipper>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/btnWelcome"
+        android:background="#00ffffff" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/slider1_donat"
+        android:layout_gravity="bottom"
+        android:id="@+id/slider" />
+</FrameLayout>
